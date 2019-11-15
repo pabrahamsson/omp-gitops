@@ -1,0 +1,6 @@
+BIND_DN=""
+LDAP_ATTRIBUTES='{"id": ["dn"], "email": ["mail"], "name": ["displayName"], "preferredUsername": ["uid"]}'
+LDAP_INSECURE="false"
+LDAP_CONFIGMAP="idp-ldap"
+LDAP_SECRET="ldap-secret"
+LDAP_URL="ldaps://ldap.example.com/ou=users,dc=example,dc=com?uid"

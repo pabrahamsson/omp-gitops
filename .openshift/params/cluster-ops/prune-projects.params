@@ -1,0 +1,4 @@
+JOB_SERVICE_ACCOUNT=project-pruner
+NAMESPACE=cluster-ops
+TIMESTAMP_HOURS_AGO=-168hours
+PROJECT_EXCLUDE_USER=cluster-ops labs-ci-cd

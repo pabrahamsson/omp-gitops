@@ -1,0 +1,17 @@
+---
+
+openshift_management_raw: "https://raw.githubusercontent.com/redhat-cop/openshift-management"
+openshift_management_version: "v3.11.3"
+
+openshift_templates_raw: "https://raw.githubusercontent.com/redhat-cop/openshift-templates"
+openshift_templates_version: "v1.4.14"
+
+htpasswd_users:
+  - username: user1
+    password: password1
+  - username: user2
+    password: password2
+  - username: user3
+    password: password3
+  - username: labs-mgr
+    password: 'r3dh4t1!'

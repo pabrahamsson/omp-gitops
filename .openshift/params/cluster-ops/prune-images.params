@@ -1,0 +1,3 @@
+JOB_SERVICE_ACCOUNT=image-pruner
+NAMESPACE=cluster-ops
+SCHEDULE="03 23 * * *"

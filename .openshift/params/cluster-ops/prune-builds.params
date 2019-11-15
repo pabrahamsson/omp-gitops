@@ -1,0 +1,4 @@
+JOB_SERVICE_ACCOUNT=build-pruner
+NAMESPACE=cluster-ops
+PRUNE_TYPE=builds
+SCHEDULE="30 22 * * *"

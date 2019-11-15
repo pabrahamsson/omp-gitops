@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Template
+metadata:
+  name: configmap-file
+objects:
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    name: "${NAME}"
+  data:
+    "${FILENAME}": |
+      "${FILE_CONTENT}"
+parameters:
+- description: The name of the configmap
+  name: NAME
+  required: true
+- description: The key/filename for the configmap
+  name: FILENAME
+  required: true
+- description: The content of the configmap
+  name: FILE_CONTENT
+  required: true
