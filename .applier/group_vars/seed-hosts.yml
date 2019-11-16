@@ -79,10 +79,10 @@ openshift_cluster_content:
     tags:
     - cluster-ops
     - cluster-ops-prune-images
-  - name: "cronjob-prune-projects"
-    namespace: "cluster-ops"
-    template: "https://raw.githubusercontent.com/redhat-cop/openshift-management/{{ openshift_management_version }}/jobs/cronjob-prune-projects.yaml"
-    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/prune-projects.params"
-    tags:
-    - cluster-ops
-    - cluster-ops-prune-projects
+#  - name: "cronjob-prune-projects"
+#    namespace: "cluster-ops"
+#    template: "https://raw.githubusercontent.com/redhat-cop/openshift-management/{{ openshift_management_version }}/jobs/cronjob-prune-projects.yaml"
+#    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/prune-projects.params"
+#    tags:
+#    - cluster-ops
+#    - cluster-ops-prune-projects
