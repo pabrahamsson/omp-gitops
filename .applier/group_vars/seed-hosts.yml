@@ -42,43 +42,43 @@ openshift_cluster_content:
     tags:
     - role-bindings
 - object: Configure Cluster Monitoring
-  content: 
+  content:
   - name: Configure Ephemeral Cluster Monitoring
     template: "{{ openshift_templates_raw }}/{{ openshift_templates_version }}/prometheus/ephemeral-cluster-monitoring.yml"
     params: "{{ inventory_dir }}/../.openshift/params/monitoring/ephemeral-cluster-monitoring.params"
     namespace: openshift-monitoring
     tags:
     - ephemeral-cluster-monitoring
-- object: Configure and Deploy Maintenance Tooling
-  content:
-  - name: "cluster-ops-projects"
-    template: "{{ openshift_templates_raw }}/{{ openshift_templates_version }}/project-requests/create-project.yml"
-    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/project.params"
-    action: create
-    tags:
-    - cluster-ops
-    - cluster-ops-projects
-  - name: "cronjob-prune-builds"
-    namespace: "cluster-ops"
-    template: "https://raw.githubusercontent.com/redhat-cop/openshift-management/{{ openshift_management_version }}/jobs/cronjob-prune-builds-deployments.yml"
-    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/prune-builds.params"
-    tags:
-    - cluster-ops
-    - cluster-ops-prune-builds
-  - name: "cronjob-prune-deployments"
-    namespace: "cluster-ops"
-    template: "https://raw.githubusercontent.com/redhat-cop/openshift-management/{{ openshift_management_version }}/jobs/cronjob-prune-builds-deployments.yml"
-    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/prune-deployments.params"
-    tags:
-    - cluster-ops
-    - cluster-ops-prune-deployments
-  - name: "cronjob-prune-images"
-    namespace: "cluster-ops"
-    template: "https://raw.githubusercontent.com/redhat-cop/openshift-management/{{ openshift_management_version }}/jobs/cronjob-prune-images.yml"
-    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/prune-images.params"
-    tags:
-    - cluster-ops
-    - cluster-ops-prune-images
+#- object: Configure and Deploy Maintenance Tooling
+#  content:
+#  - name: "cluster-ops-projects"
+#    template: "{{ openshift_templates_raw }}/{{ openshift_templates_version }}/project-requests/create-project.yml"
+#    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/project.params"
+#    action: create
+#    tags:
+#    - cluster-ops
+#    - cluster-ops-projects
+#  - name: "cronjob-prune-builds"
+#    namespace: "cluster-ops"
+#    template: "https://raw.githubusercontent.com/redhat-cop/openshift-management/{{ openshift_management_version }}/jobs/cronjob-prune-builds-deployments.yml"
+#    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/prune-builds.params"
+#    tags:
+#    - cluster-ops
+#    - cluster-ops-prune-builds
+#  - name: "cronjob-prune-deployments"
+#    namespace: "cluster-ops"
+#    template: "https://raw.githubusercontent.com/redhat-cop/openshift-management/{{ openshift_management_version }}/jobs/cronjob-prune-builds-deployments.yml"
+#    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/prune-deployments.params"
+#    tags:
+#    - cluster-ops
+#    - cluster-ops-prune-deployments
+#  - name: "cronjob-prune-images"
+#    namespace: "cluster-ops"
+#    template: "https://raw.githubusercontent.com/redhat-cop/openshift-management/{{ openshift_management_version }}/jobs/cronjob-prune-images.yml"
+#    params: "{{ inventory_dir }}/../.openshift/params/cluster-ops/prune-images.params"
+#    tags:
+#    - cluster-ops
+#    - cluster-ops-prune-images
 #  - name: "cronjob-prune-projects"
 #    namespace: "cluster-ops"
 #    template: "https://raw.githubusercontent.com/redhat-cop/openshift-management/{{ openshift_management_version }}/jobs/cronjob-prune-projects.yaml"
