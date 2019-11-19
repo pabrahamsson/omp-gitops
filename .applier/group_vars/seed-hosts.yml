@@ -4,7 +4,7 @@ oauth:
   htpasswd:
     HTPASSWD_SECRET: "{{ secrets.htpasswd.SECRET_NAME }}"
 
-secret_action: create
+secret_action: replace
 secrets:
   htpasswd:
     SECRET_KEY: htpasswd
